@@ -1,1 +1,65 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>Escape Room Finale</title>
 
+<style>
+body{
+background:#0f172a;
+color:white;
+font-family:Arial;
+text-align:center;
+padding-top:120px;
+}
+
+input{
+padding:10px;
+font-size:18px;
+}
+
+button{
+padding:10px 20px;
+font-size:18px;
+margin-left:10px;
+}
+
+#result{
+margin-top:40px;
+font-size:28px;
+}
+</style>
+
+</head>
+
+<body>
+
+<h1>Escape Room – Finale</h1>
+
+<p>Welche Farbe hatte der erste Raum?</p>
+
+<input id="answer" type="text">
+<button onclick="check()">Prüfen</button>
+
+<div id="result"></div>
+
+<script>
+
+function check(){
+
+let a=document.getElementById("answer").value.toLowerCase();
+
+if(a==="rot"){
+document.getElementById("result").innerHTML=
+"Richtig!<br><br>Der Türcode lautet:<br><b>7341</b>";
+}
+else{
+document.getElementById("result").innerHTML="Falsche Antwort";
+}
+
+}
+
+</script>
+
+</body>
+</html>
